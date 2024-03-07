@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1..
+        let age = Number(prompt("1. How old are you?"))
+        if (age <= 12) {
+            alert("Child")
+        }
+        else {
+            if (age <= 18) {
+                alert("Teenager")
+            }
+            else {
+                if (age <= 60) {
+                    alert("Adult")
+                }
+                else {
+                    if (age > 60) {
+                        alert("Pensioner")
+                    }
+                    else {
+                        alert("This is not a number!")
+                    }
+                }
+            }
+        }
+        //2..
+        let num1 = Number(prompt("2.Enter a number from 0 to 9:"))
+        switch (num1) {
+        case 0:
+            alert(")")
+            break
+        case 1:
+            alert("!")
+            break
+        case 2:
+            alert("@")
+            break
+        case 3:
+            alert("#")
+            break
+        case 4:
+            alert("$")
+            break
+        case 5:
+            alert("%")
+            break
+        case 6:
+            alert("^")
+            break
+        case 7:
+            alert("&")
+            break
+        case 8:
+            alert("*")
+            break
+        case 9:
+            alert("(")
+            break
+        default:
+            alert("this not number what i asked")
+        }
+        //3..
+        let num2 = Number(prompt("3.Enter a three-digit number:"))
+        const fnum = Math.floor(num2 / 100)
+        const lnum = num2 % 10
+        const snum = Math.floor((num2 % 100) / 10);
+        if (fnum == lnum) {
+            alert("have same numbers ")
+        }
+        else {
+            if (fnum == snum) {
+                alert("have same numbers ")
+            }
+            else {
+                if (lnum == snum) {
+                    alert("have same numbers ")
+                }
+                else {
+                    alert('have not same numbers')
+                }
+            }
+        }
+        //4..
+        let year = Number(prompt("4.Enter a year:"))
+        if ((year % 4 == 0) && (year % 100 != 0)) {
+            alert("Leap year")
+        }
+        else {
+            if ((year % 400 == 0) && (year % 100 == 0)) {
+                alert("Leap year")
+            }
+            else {
+                alert("Not leap year")
+            }
+        }
+        //5..
+        let str = Number(prompt("5.Enter a five-digit number:"))
+        const lastnum = str % 10
+        const prelastnum = Math.floor((str % 100) / 10)
+        const afterfnum = Math.floor((str % 10000) / 1000);
+        const firstnum = Math.floor(str / 10000);
+        if ((lastnum == firstnum) && (prelastnum == afterfnum)) {
+            alert("Palindrom")
+        }
+        else {
+            alert("Not a Palindrom")
+        }
+        //6..
+        let doll = Number(prompt("6.Enter dollars:"))
+        let choose = prompt("6.Enter number of the currency you want to transfer money to: 1.EUR,2.UAN,3.AZN")
+        let uan = doll * 7.22
+        let azn = doll * 1.7
+        let eur = doll * 0.9
+        if (choose == 1) {
+            alert(eur)
+        }
+        else {
+            if (choose == 2) {
+                alert(uan)
+            }
+            else {
+                if (choose == 3) {
+                    alert(azn)
+                }
+            }
+        }
+        //7..
+        let price = Number(prompt("7.Enter a price"))
+        if ((200 <= price) && (price < 300)) {
+            let sale = price * 0.03
+            alert(`Your sale equals: ${sale}`)
+        }
+        else {
+            if ((300 <= price) && (price < 500)) {
+                let sale = price * 0.05
+                alert(`Your sale equals: ${sale}`)
+            }
+            else {
+                if (500 <= price) {
+                    let sale = price * 0.07
+                    alert(`Your sale equals: ${sale}`)
+                }
+                else {
+                    alert("You dont have a sale")
+                }
+            }
+        }
+        //8..
+        let lenthc = Number(prompt("8.Enter circumference of a circle "))
+        let lenths = Number(prompt("8.Enter perimeter of a square"))
+        const diametr = lenthc / Math.PI
+        const sides = lenths / 4
+        alert(sides >= diametr ? "can be inside square" : "cant be inside square")
+            //9..
+        let qu1 = prompt("9. 1)What is the capital of Russia?: 1.Moscow 2.London 3.New-York")
+        let qu2 = prompt(" 2)What is the capital of England?: 1.Moscow 2.London 3.New-York")
+        let qu3 = prompt(" 3)What is the capital of France?: 1.Moscow 2.London 3.Paris")
+        let count = 0
+        if ((qu1 == 1) && (qu2 == 2) && (qu3 == 3)) {
+            alert(6)
+        }
+        else {
+            if ((qu1 != 1) && (qu2 != 2) && (qu3 != 3)) {
+                alert(0)
+            }
+            else {
+                if ((qu1 == 1) && (qu2 != 2) && (qu3 != 3)) {
+                    alert(2)
+                }
+                else {
+                    if ((qu1 == 1) && (qu2 == 2) && (qu3 != 3)) {
+                        alert(4)
+                    }
+                    else {
+                        if ((qu1 == 1) && (qu2 != 2) && (qu3 == 3)) {
+                            alert(4)
+                        }
+                        else {
+                            if ((qu1 != 1) && (qu2 == 2) && (qu3 == 3)) {
+                                alert(4)
+                            }
+                            else {
+                                if ((qu1 != 1) && (qu2 == 2) && (qu3 != 3)) {
+                                    alert(2)
+                                }
+                                else {
+                                    if ((qu1 != 1) && (qu2 != 2) && (qu3 == 3)) {
+                                        alert(2)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>
